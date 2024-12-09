@@ -1,0 +1,153 @@
+/* Establecer el estilo base para toda la aplicación */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* El body tiene un color de fondo suave, un tipo de letra moderno y centrado */
+body {
+  background-color: #f4f4f9; /* Fondo gris claro */
+  color: #333; /* Texto oscuro para buen contraste */
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor principal */
+#app {
+  width: 100%;
+  max-width: 600px; /* Limitar el ancho de la aplicación */
+  background-color: #fff; /* Fondo blanco para el contenedor */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 20px;
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  color: #2c3e50; /* Un tono oscuro de azul */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Estilos del formulario de tarea */
+.add-task {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.add-task input:focus {
+  border-color: #007bff; /* Resaltar borde cuando el input esté activo */
+}
+
+.add-task button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Azul brillante */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-task button:hover {
+  background-color: #0056b3; /* Cambiar a un azul más oscuro al hacer hover */
+}
+
+/* Lista de tareas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+  transition: background-color 0.3s;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9; /* Resaltar tarea al pasar el mouse */
+}
+
+/* Botones de tareas */
+.task-item button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-item button:nth-child(1) {
+  background-color: #28a745; /* Verde para marcar tarea como completada */
+}
+
+.task-item button:nth-child(1):hover {
+  background-color: #218838; /* Cambiar a verde más oscuro al hacer hover */
+}
+
+.task-item button:nth-child(2) {
+  background-color: #dc3545; /* Rojo para eliminar tarea */
+}
+
+.task-item button:nth-child(2):hover {
+  background-color: #c82333; /* Cambiar a rojo más oscuro al hacer hover */
+}
+
+/* Tareas completadas */
+.task-item .completed {
+  text-decoration: line-through;
+  color: #888; /* Gris para texto tachado */
+}
+
+/* Estilo para el filtro */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #6c757d; /* Gris para los botones de filtro */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 5px;
+}
+
+button:hover {
+  background-color: #5a6268; /* Gris más oscuro al hacer hover */
+}
