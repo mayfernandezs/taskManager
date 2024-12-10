@@ -1,3 +1,4 @@
+<!-- Componente de lista de tareas --> 
 <template>
   <div>
     <h2>Task List</h2>
@@ -9,12 +10,12 @@
 
     <!-- Lista de tareas filtradas -->
     <ul>
-      <li v-for="task in filteredTasks" :key="task._id"> <!-- Cambié id por _id ya que es lo que MongoDB usa -->
+      <li v-for="task in filteredTasks" :key="task._id"> 
         <span :class="{ completed: task.completed }">{{ task.name }}</span>
-        <button @click="toggleTask(task._id)"> <!-- Cambié id por _id -->
-          {{ task.completed ? 'Unmark' : 'Complete' }}
+        <button :class="{ pendingBtn: task.completed }" @click="toggleTask(task._id)"> 
+          {{ task.completed ? 'Pend' : 'Complete' }}
         </button>
-        <button @click="deleteTask(task._id)">Delete</button> <!-- Cambié id por _id -->
+        <button class="deleteBtn" @click="deleteTask(task._id)">Delete</button> 
       </li>
     </ul>
   </div>

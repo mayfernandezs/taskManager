@@ -29,16 +29,18 @@ body {
   text-align: center;
 }
 
-/* Header */
-h1 {
-  color: #4CAF50;
+
+/* Header */ 
+h1 {	
+  color: #007bff;
   margin-bottom: 20px;
   font-size: 2rem;
+  text-decoration: underline;
 }
 
 /* Task list container */
 h2 {
-  margin-bottom: 20px;
+  margin-top: 20px;
   color: #4CAF50;
   font-size: 1.5rem;
 }
@@ -79,7 +81,7 @@ span {
 }
 
 /* Buttons */
-button {
+button {	
   background-color: #4CAF50;
   color: white;
   border: none;
@@ -88,18 +90,44 @@ button {
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-left: 5px;
+  margin: 5px;
 }
 
-button:hover {
-  background-color: #45a049;
+button:hover {	
+  background-color: #207924;
 }
 
-button:focus {
+.deleteBtn {
+  background-color: #D11149;
+}
+
+.deleteBtn:hover {
+  background-color: #840B2D;
+}
+
+.pendingBtn {
+  background-color: #F17105;
+}
+
+.pendingBtn:hover {
+  background-color: #A04A03;
+}
+
+button:focus {	
   outline: none;
 }
 
-/* Input and add task button */
+/* Filter buttons */
+.filter {
+  background-color: #56CBF9;
+  margin: 5px;
+}
+
+.filter:hover {
+  background-color: #007bff;
+}
+
+/* Input task */
 input {
   padding: 10px;
   width: calc(100% - 100px);
@@ -114,50 +142,11 @@ input:focus {
   outline: none;
 }
 
-button[type="button"] {
-  width: 80px;
-  background-color: #007bff;
-}
-
-button[type="button"]:hover {
-  background-color: #0056b3;
-}
-
 /* Task filter */
 h2 + div {
   margin-top: 20px;
 }
 
-button {
-  background-color: #007bff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin: 5px;
-}
 
-button:hover {
-  background-color: #0056b3;
-}
 
-button:focus {
-  outline: none;
-}
 
-/* Filter buttons */
-button {
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 5px;
-}
-
-button:hover {
-  background-color: #007bff;
-}
-
-button:focus {
-  outline: none;
-}

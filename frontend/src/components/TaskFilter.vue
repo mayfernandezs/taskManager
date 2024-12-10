@@ -1,10 +1,10 @@
+<!-- Componente de filtrado de tareas --> 
 <template>
   <div>
     <h2>Filter Tasks</h2>
-
-    <button @click="applyFilter('all')">All</button> 
-    <button @click="applyFilter('completed')">Completed</button>
-    <button @click="applyFilter('pending')">Pending</button>
+    <button class="filter" @click="applyFilter('all')">All</button> 
+    <button class="filter" @click="applyFilter('completed')">Completed</button>
+    <button class="filter" @click="applyFilter('pending')">Pending</button>
   </div>
 </template>
 
