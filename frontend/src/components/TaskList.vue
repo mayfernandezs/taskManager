@@ -9,12 +9,12 @@
 
     <!-- Lista de tareas filtradas -->
     <ul>
-      <li v-for="task in filteredTasks" :key="task.id">
+      <li v-for="task in filteredTasks" :key="task._id"> <!-- Cambié id por _id ya que es lo que MongoDB usa -->
         <span :class="{ completed: task.completed }">{{ task.name }}</span>
-        <button @click="toggleTask(task.id)">
+        <button @click="toggleTask(task._id)"> <!-- Cambié id por _id -->
           {{ task.completed ? 'Unmark' : 'Complete' }}
         </button>
-        <button @click="deleteTask(task.id)">Delete</button>
+        <button @click="deleteTask(task._id)">Delete</button> <!-- Cambié id por _id -->
       </li>
     </ul>
   </div>

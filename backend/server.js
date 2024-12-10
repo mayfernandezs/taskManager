@@ -25,8 +25,22 @@ const Task = mongoose.model('Task', taskSchema);
 // Rutas de la API
 
 app.get('/tasks', async (req, res) => {
-  const tasks = await Task.find();
-  res.json(tasks);
+  const { filter } = req.query;  // 'filter' puede ser 'all', 'completed', o 'notCompleted'
+
+  let query = {};  // Por defecto, muestra todas las tareas
+
+  if (filter === 'completed') {
+    query.completed = true;
+  } else if (filter === 'notCompleted') {
+    query.completed = false;
+  }
+
+  try {
+    const tasks = await Task.find(query);
+    res.json(tasks);
+  } catch (err) {
+    res.status(500).send({ message: 'Error al obtener tareas', error: err });
+  }
 });
 
 
